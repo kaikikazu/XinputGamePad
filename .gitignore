@@ -45,3 +45,6 @@ Assets/StreamingAssets/crashlytics-build.properties
 
 # Ignore UniRx
 Assets/XinputGamepad/Plugins/UniRx/
+
+# Ignore VRM Files
+Assets/VRM/

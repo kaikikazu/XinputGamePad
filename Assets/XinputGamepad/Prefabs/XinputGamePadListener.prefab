@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4404219019538004}
   - component: {fileID: 114190998200413898}
   m_Layer: 0
-  m_Name: BGpadListener
+  m_Name: XinputGamePadListener
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
