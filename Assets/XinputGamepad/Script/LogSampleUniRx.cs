@@ -39,8 +39,8 @@ public class LogSampleUniRx : MonoBehaviour {
 	}
 
 	void Update(){
-		// Debug.LogFormat("RightStick : ({0} , {1})\n",GamePad.GetRightStick().x,GamePad.GetRightStick().y);
-		// Debug.LogFormat("LeftStick : ({0} , {1})\n",GamePad.GetLeftStick().x,GamePad.GetLeftStick().y);
-		// Debug.Log("TrigerRight : " + GamePad.GetTriger().Right + " TrigerLeft : " + GamePad.GetTriger().Left);
+		Debug.LogFormat("RightStick : ({0} , {1})\n",GamePad.GetRightStick().x,GamePad.GetRightStick().y);
+		Debug.LogFormat("LeftStick : ({0} , {1})\n",GamePad.GetLeftStick().x,GamePad.GetLeftStick().y);
+		Debug.Log("TrigerRight : " + GamePad.GetTriger().Right + " TrigerLeft : " + GamePad.GetTriger().Left);
 	}
 }
