@@ -2,45 +2,45 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UniRx;
-using BackGroundGamepad;
+using XinputGamePad;
 
 public class LogSampleUniRx : MonoBehaviour {
-	public BGPadListener GamePad;
+	public XinputGamePadListener GamePad;
 
 	// Use this for initialization	
 	void Start () {
 		GamePad.OnTimeChanged.Subscribe(key =>
         {
-			if(key == BGpadKey.LEFT){
+			if(key == XinputKey.LEFT){
 				Debug.Log(key);
 			}
-			if(key == BGpadKey.RIGHT){
+			if(key == XinputKey.RIGHT){
 				Debug.Log(key);
 			}
-			if(key == BGpadKey.UP){
+			if(key == XinputKey.UP){
 				Debug.Log(key);
 			}
-			if(key == BGpadKey.DOWN){
+			if(key == XinputKey.DOWN){
 				Debug.Log(key);
 			}
-			if(key == BGpadKey.A){
+			if(key == XinputKey.A){
 				Debug.Log(key);
 			}
-			if(key == BGpadKey.B){
+			if(key == XinputKey.B){
 				Debug.Log(key);
 			}
-			if(key == BGpadKey.X){
+			if(key == XinputKey.X){
 				Debug.Log(key);
 			}
-			if(key == BGpadKey.Y){
+			if(key == XinputKey.Y){
 				Debug.Log(key);
 			}
         });
 	}
 
 	void Update(){
-		// Debug.LogFormat("RightStick : ({0} , {1})\n",GamePad.GetRightStick().x,GamePad.GetRightStick().y);
-		// Debug.LogFormat("LeftStick : ({0} , {1})\n",GamePad.GetLeftStick().x,GamePad.GetLeftStick().y);
-		// Debug.Log("TrigerRight : " + GamePad.GetTriger().Right + " TrigerLeft : " + GamePad.GetTriger().Left);
+		Debug.LogFormat("RightStick : ({0} , {1})\n",GamePad.GetRightStick().x,GamePad.GetRightStick().y);
+		Debug.LogFormat("LeftStick : ({0} , {1})\n",GamePad.GetLeftStick().x,GamePad.GetLeftStick().y);
+		Debug.Log("TrigerRight : " + GamePad.GetTriger().Right + " TrigerLeft : " + GamePad.GetTriger().Left);
 	}
 }

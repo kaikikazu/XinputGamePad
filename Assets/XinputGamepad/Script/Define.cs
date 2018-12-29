@@ -1,5 +1,5 @@
-﻿namespace BackGroundGamepad{
-	public enum BGpadKey
+﻿namespace XinputGamePad{
+	public enum XinputKey
 	{
 		LEFT,
 		RIGHT,
@@ -11,7 +11,7 @@
 		Y
 	}
 
-	public struct BGpadTriger{
+	public struct XinputTriger{
 		public int Right;
 		public int Left;
 	}

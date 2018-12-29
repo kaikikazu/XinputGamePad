@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UniRx;
 
-namespace BackGroundGamepad{
-	public class BGPadListener : MonoBehaviour {
+namespace XinputGamePad{
+	public class XinputGamePadListener : MonoBehaviour {
 		public int DeviceNumber;
-		private BGpadKey key;
-		private Subject<BGpadKey> buttonSubject = new Subject<BGpadKey>();
-		public IObservable<BGpadKey> OnTimeChanged
+		private XinputKey key;
+		private Subject<XinputKey> buttonSubject = new Subject<XinputKey>();
+		public IObservable<XinputKey> OnTimeChanged
 		{
 			get { return buttonSubject; }
 		} 
@@ -19,35 +19,35 @@ namespace BackGroundGamepad{
 
 			// 方向（デジタル）
 			if((Buttons & InputConst.XINPUT_GAMEPAD_DPAD_LEFT) != 0){
-				buttonSubject.OnNext(BGpadKey.LEFT);
+				buttonSubject.OnNext(XinputKey.LEFT);
 			}
 			if((Buttons & InputConst.XINPUT_GAMEPAD_DPAD_RIGHT) != 0){
-				buttonSubject.OnNext(BGpadKey.RIGHT);
+				buttonSubject.OnNext(XinputKey.RIGHT);
 			}
 			if((Buttons & InputConst.XINPUT_GAMEPAD_DPAD_UP) != 0){
-				buttonSubject.OnNext(BGpadKey.UP);
+				buttonSubject.OnNext(XinputKey.UP);
 			}
 			if((Buttons & InputConst.XINPUT_GAMEPAD_DPAD_DOWN) != 0){
-				buttonSubject.OnNext(BGpadKey.DOWN);
+				buttonSubject.OnNext(XinputKey.DOWN);
 			}
 
 			// ABXYボタン
 			if((Buttons & InputConst.XINPUT_GAMEPAD_A) != 0){
-				buttonSubject.OnNext(BGpadKey.A);
+				buttonSubject.OnNext(XinputKey.A);
 			}
 			if((Buttons & InputConst.XINPUT_GAMEPAD_B) != 0){
-				buttonSubject.OnNext(BGpadKey.B);
+				buttonSubject.OnNext(XinputKey.B);
 			}
 			if((Buttons & InputConst.XINPUT_GAMEPAD_X) != 0){
-				buttonSubject.OnNext(BGpadKey.X);
+				buttonSubject.OnNext(XinputKey.X);
 			}
 			if((Buttons & InputConst.XINPUT_GAMEPAD_Y) != 0){
-				buttonSubject.OnNext(BGpadKey.Y);
+				buttonSubject.OnNext(XinputKey.Y);
 			}
 		}
 
-		public BGpadTriger GetTriger(){
-			BGpadTriger triger = new BGpadTriger();
+		public XinputTriger GetTriger(){
+			XinputTriger triger = new XinputTriger();
 			triger.Right = DllConst.GetRightTrigger(DeviceNumber);
 			triger.Left = DllConst.GetLeftTrigger(DeviceNumber);
 			return triger;

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Runtime.InteropServices;
 using UnityEngine.UI;
-using BackGroundGamepad;
+using XinputGamePad;
 
 public class LogSampleNormal : MonoBehaviour {
 	public int DeviceNumber;

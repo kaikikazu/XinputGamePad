@@ -1,6 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 
-namespace BackGroundGamepad{
+namespace XinputGamePad{
 
 	public static class DllConst{
 		[DllImport ("XInputCapture")] public static extern void	Capture();
