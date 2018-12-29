@@ -8,7 +8,7 @@ namespace XinputGamePad{
 		public int DeviceNumber;
 		private XinputKey key;
 		private Subject<XinputKey> buttonSubject = new Subject<XinputKey>();
-		public IObservable<XinputKey> OnTimeChanged
+		public IObservable<XinputKey> OnButtonPushed
 		{
 			get { return buttonSubject; }
 		} 

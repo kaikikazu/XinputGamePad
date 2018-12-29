@@ -9,7 +9,7 @@ public class LogSampleUniRx : MonoBehaviour {
 
 	// Use this for initialization	
 	void Start () {
-		GamePad.OnTimeChanged.Subscribe(key =>
+		GamePad.OnButtonPushed.Subscribe(key =>
         {
 			if(key == XinputKey.LEFT){
 				Debug.Log(key);
@@ -39,6 +39,7 @@ public class LogSampleUniRx : MonoBehaviour {
 	}
 
 	void Update(){
+
 		Debug.LogFormat("RightStick : ({0} , {1})\n",GamePad.GetRightStick().x,GamePad.GetRightStick().y);
 		Debug.LogFormat("LeftStick : ({0} , {1})\n",GamePad.GetLeftStick().x,GamePad.GetLeftStick().y);
 		Debug.Log("TrigerRight : " + GamePad.GetTriger().Right + " TrigerLeft : " + GamePad.GetTriger().Left);
