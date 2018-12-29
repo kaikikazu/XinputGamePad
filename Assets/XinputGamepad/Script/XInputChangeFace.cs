@@ -16,25 +16,29 @@ public class XInputChangeFace : MonoBehaviour {
 		GamePad.OnButtonPushed.Subscribe(key =>
         {
 			if(key == XinputKey.A){
-                target.ImmediatelySetValue(BlendShapePreset.Fun, 1f);;
+                target.ImmediatelySetValue(BlendShapePreset.Fun, 1f);
+			}else{
+				target.ImmediatelySetValue(BlendShapePreset.Fun, 0f);
 			}
 			if(key == XinputKey.B){
                 target.ImmediatelySetValue(BlendShapePreset.Angry, 1f);
+			}else{
+				target.ImmediatelySetValue(BlendShapePreset.Angry, 0f);
 			}
 			if(key == XinputKey.X){
                 target.ImmediatelySetValue(BlendShapePreset.Joy, 1f);
+			}else{
+				target.ImmediatelySetValue(BlendShapePreset.Joy, 0f);
 			}
 			if(key == XinputKey.Y){
                 target.ImmediatelySetValue(BlendShapePreset.Sorrow, 1f);
+			}else{
+				target.ImmediatelySetValue(BlendShapePreset.Sorrow, 0f);
 			}
         });
 	}
 
 	void Update(){
-		target.ImmediatelySetValue(BlendShapePreset.Fun, 0f);
-		target.ImmediatelySetValue(BlendShapePreset.Angry, 0f);
-		target.ImmediatelySetValue(BlendShapePreset.Joy, 0f);
-		target.ImmediatelySetValue(BlendShapePreset.Sorrow, 0f);
 		target.ImmediatelySetValue(BlendShapePreset.Blink_R, Mathf.Clamp01(GamePad.GetTriger().Right));
 		target.ImmediatelySetValue(BlendShapePreset.Blink_L, Mathf.Clamp01(GamePad.GetTriger().Left));
 
